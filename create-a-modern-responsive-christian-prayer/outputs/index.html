@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INTERCESSIONS | Jesus Youth Musaffah Prayer Requests</title>
+  <meta
+    name="description"
+    content="Share prayer intentions and thanksgiving with Jesus Youth Musaffah. Submit prayer requests, testimonies, and stand together in faith."
+  />
+  <meta property="og:title" content="INTERCESSIONS | Jesus Youth Musaffah" />
+  <meta
+    property="og:description"
+    content="A peaceful prayer request and thanksgiving page for the Jesus Youth Musaffah community."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=1600&q=80" />
+  <meta name="theme-color" content="#0d2447" />
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d2447'/%3E%3Cpath d='M28 10h8v14h13v8H36v22h-8V32H15v-8h13z' fill='%23f6d77a'/%3E%3C/svg%3E"
+  />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site-background" aria-hidden="true"></div>
+  <div class="page-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#hero" aria-label="INTERCESSIONS home">
+      <span class="brand-cross" aria-hidden="true"></span>
+      <span>INTERCESSIONS</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#prayer">Prayer</a>
+      <a href="#thanksgiving">Thanksgiving</a>
+      <a href="#community">Community</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="hero">
+      <div class="hero-content fade-in">
+        <p class="eyebrow">JESUS YOUTH MUSAFFAH</p>
+        <h1>INTERCESSIONS</h1>
+        <p class="hero-message">
+          Share your prayer intentions and thanksgiving with our prayer community.
+          We stand together in faith, believing that God hears every prayer.
+        </p>
+        <div class="hero-actions" aria-label="Page actions">
+          <a class="primary-button" href="#prayer">Send Prayer Request</a>
+          <button class="music-button" id="musicToggle" type="button" aria-pressed="false">
+            <span class="music-icon" aria-hidden="true"></span>
+            Prayer Music
+          </button>
+        </div>
+      </div>
+
+      <aside class="verse-card glass-card fade-in" aria-label="Bible verse">
+        <p class="verse-text">
+          “Do not be anxious about anything, but in every situation, by prayer
+          and petition, with thanksgiving, present your requests to God.”
+        </p>
+        <p class="verse-reference">— Philippians 4:6</p>
+      </aside>
+    </section>
+
+    <section class="section forms-grid" id="prayer">
+      <article class="glass-card form-card reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Prayer Request</p>
+          <h2>Share Your Intention</h2>
+        </div>
+
+        <!-- Netlify Forms: data-netlify enables static form capture, and the hidden
+             form-name field must match the form name exactly for processing. -->
+        <form name="prayer-request" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="prayer-request" />
+          <p class="hidden">
+            <label>Do not fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="field-group two-columns">
+            <label>
+              <span>Full Name <small>(optional)</small></span>
+              <input type="text" name="full-name" autocomplete="name" placeholder="Your name" />
+            </label>
+            <label>
+              <span>Email Address <small>(optional)</small></span>
+              <input type="email" name="email" autocomplete="email" placeholder="you@example.com" />
+            </label>
+          </div>
+
+          <label>
+            <span>Prayer Category</span>
+            <select name="prayer-category">
+              <option>Healing</option>
+              <option>Family</option>
+              <option>Studies</option>
+              <option>Job</option>
+              <option>Financial</option>
+              <option>Spiritual Growth</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Prayer Request <strong>*</strong></span>
+            <textarea name="prayer-request-message" rows="7" required placeholder="Write your prayer request here"></textarea>
+          </label>
+
+          <label class="checkbox-row">
+            <input type="checkbox" name="anonymous-request" />
+            <span>Submit this request anonymously</span>
+          </label>
+
+          <button class="submit-button" type="submit">Submit Prayer Request</button>
+        </form>
+      </article>
+
+      <article class="glass-card form-card reveal" id="thanksgiving">
+        <div class="section-heading">
+          <p class="eyebrow">Thanksgiving Testimony</p>
+          <h2>Share Your Thanksgiving</h2>
+        </div>
+
+        <!-- Netlify Forms: this static form is captured by Netlify when deployed.
+             Keep the hidden form-name value synchronized with name="thanksgiving-form". -->
+        <form name="thanksgiving-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="thanksgiving-form" />
+          <p class="hidden">
+            <label>Do not fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <label>
+            <span>Name <small>(optional)</small></span>
+            <input type="text" name="name" autocomplete="name" placeholder="Your name" />
+          </label>
+
+          <label>
+            <span>Testimony / Thanksgiving Message <strong>*</strong></span>
+            <textarea name="thanksgiving-message" rows="10" required placeholder="Share what the Lord has done"></textarea>
+          </label>
+
+          <button class="submit-button" type="submit">Submit Thanksgiving</button>
+        </form>
+      </article>
+    </section>
+
+    <section class="section community-section" id="community">
+      <div class="glass-card community-card reveal">
+        <p class="eyebrow">Community Prayers</p>
+        <h2>Remembered In Faith</h2>
+        <p>
+          Your prayer intentions will be remembered in our community prayers.
+          May God's grace and peace be with you.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>JESUS YOUTH MUSAFFAH</p>
+    <p>“Pray for one another.” (James 5:16)</p>
+    <p>&copy; <span id="currentYear"></span> INTERCESSIONS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
